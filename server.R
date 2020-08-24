@@ -18,10 +18,10 @@ library(devtools)
 library(rio)
 library(lattice)
 
-vid_2016 <- import('http://neosfest.com/neos_stats/catalogo_2016.csv')
-vid_2017 <- import('http://neosfest.com/neos_stats/catalogo_2017.csv')
-vid_2018 <- import('http://neosfest.com/neos_stats/catalogo_2018.csv')
-vid_todos <- import('http://neosfest.com/neos_stats/catalogo_completo.csv')
+vid_2016 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2016.csv')
+vid_2017 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2016.csv')
+vid_2018 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2016.csv')
+vid_todos <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalogo_completo.csv')
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {

@@ -10,11 +10,6 @@ library(rio)
 library(lattice)
 library(DT)
 
-vid_2016 <- import('http://neosfest.com/neos_stats/catalogo_2016.csv')
-vid_2017 <- import('http://neosfest.com/neos_stats/catalogo_2017.csv')
-vid_2018 <- import('http://neosfest.com/neos_stats/catalogo_2018.csv')
-vid_todos <- import('http://neosfest.com/neos_stats/catalogo_completo.csv')
-
 library(shiny)
 
 # Define UI for dataset viewer application
