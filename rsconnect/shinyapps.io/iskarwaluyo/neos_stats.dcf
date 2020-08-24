@@ -1,0 +1,12 @@
+name: neos_stats
+title: neos_stats
+username:
+account: iskarwaluyo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 845586
+bundleId: 3552434
+url: https://iskarwaluyo.shinyapps.io/neos_stats/
+when: 1598296579.27254
+asMultiple: FALSE
+asStatic: FALSE

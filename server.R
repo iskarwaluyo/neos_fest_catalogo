@@ -19,13 +19,14 @@ library(rio)
 library(lattice)
 
 vid_2016 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2016.csv')
-vid_2017 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2016.csv')
-vid_2018 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2016.csv')
+vid_2017 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2017.csv')
+vid_2018 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2018.csv')
+vid_2019 <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalog_2019.csv')
+
 vid_todos <- import('https://raw.githubusercontent.com/iskarwaluyo/neos_fest_catalogo/master/data/catalogo_completo.csv')
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-  
   
   # Return the requested dataset
   datasetInput <- reactive({
@@ -33,6 +34,7 @@ shinyServer(function(input, output) {
            "2016" = vid_2016,
            "2017" = vid_2017,
            "2018" = vid_2018,
+           "2019" = vid_2019,
            "todos" = vid_todos
     )
   })
@@ -66,7 +68,7 @@ shinyServer(function(input, output) {
   output$frecuencia_escuelas <- renderTable({
     sumisiones <<- datasetInput()
     escuelas <<- as.data.frame(sumisiones$universidad)
-    as.data.frame(table(unlist(escuelas)))
+    escuelas <<- as.data.frame(table(unlist(escuelas)))
   })
   
   output$stat_video <- renderTable({

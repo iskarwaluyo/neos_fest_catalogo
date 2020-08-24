@@ -20,7 +20,7 @@ shinyUI(fluidPage(
   
   fluidRow(
     column(2, "",
-      selectInput("sumisiones", "Elige un año:", choices = c("2016", "2017", "2018", "todos")),
+      selectInput("sumisiones", "Elige un año:", choices = c("2016", "2017", "2018", "2019", "todos")),
       submitButton("Actualizar Vista")
   ),
   
